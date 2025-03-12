@@ -19,8 +19,8 @@ function getHumanChoice() {
   console.log(userChoice);
   return userChoice;
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
 function playGame() {
   let humanScore = 0;
@@ -52,9 +52,17 @@ function playGame() {
   }
 
   playRound(humanSelection, computerSelection);
+  getHumanChoice();
+  getComputerChoice();
   playRound(humanSelection, computerSelection);
+  getHumanChoice();
+  getComputerChoice();
   playRound(humanSelection, computerSelection);
+  getHumanChoice();
+  getComputerChoice();
   playRound(humanSelection, computerSelection);
+  getHumanChoice();
+  getComputerChoice();
   playRound(humanSelection, computerSelection);
 }
 
