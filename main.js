@@ -19,11 +19,17 @@ function getHumanChoice() {
 
 // Play the whole game
 function playGame() {
+  // Save the score to declare the winner
   let humanScore = 0;
   let computerScore = 0;
+
+  // Declare the function inside the game
   function playRound(humanChoice, computerChoice) {
+    // Make both choices lowercase to easy comparison
     humanChoice = humanChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
+
+    //Declare the round winner
     if (humanChoice === "rock" && computerChoice === "paper") {
       computerScore = computerScore + 1;
       console.log("You lose! Paper beats Rock");
@@ -46,7 +52,7 @@ function playGame() {
       console.log("Draw!");
     }
   }
-
+  // Rounds five times
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
   playRound(getHumanChoice(), getComputerChoice());
@@ -66,4 +72,5 @@ function playGame() {
   }
 }
 
+// Run the game
 playGame();
