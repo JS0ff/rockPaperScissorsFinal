@@ -10,18 +10,13 @@ function getComputerChoice() {
   } else if (randomInt === 0) {
     computerChoice = "Scissors";
   }
-  console.log(computerChoice);
   return computerChoice;
 }
 
 function getHumanChoice() {
   userChoice = prompt("Rock, Paper, Scissors?");
-  console.log(userChoice);
   return userChoice;
 }
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
-
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
@@ -51,19 +46,11 @@ function playGame() {
     }
   }
 
-  playRound(humanSelection, computerSelection);
-  getHumanChoice();
-  getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  getHumanChoice();
-  getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  getHumanChoice();
-  getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  getHumanChoice();
-  getComputerChoice();
-  playRound(humanSelection, computerSelection);
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
 }
 
 playGame();
