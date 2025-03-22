@@ -1,3 +1,7 @@
+const rockButton = document.querySelector("rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
 // Get computer choice for Rock, Paper, Scissors
 function getComputerChoice() {
   let computerChoice;
@@ -53,11 +57,11 @@ function playGame() {
     }
   }
   // Rounds five times
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
-  playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
+  // playRound(getHumanChoice(), getComputerChoice());
 
   //Declare the winner
   if (humanScore > computerScore) {
