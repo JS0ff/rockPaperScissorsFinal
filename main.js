@@ -25,23 +25,37 @@ function playRound(humanChoice, computerChoice) {
   //Declare the round winner
   if (humanChoice === "rock" && computerChoice === "paper") {
     computerScore = computerScore + 1;
+    humanResult.textContent = humanScore;
+    computerResult.textContent = computerScore;
     currentResult.textContent = "You lose! Paper beats Rock";
   } else if (humanChoice === "paper" && computerChoice === "scissors") {
     computerScore = computerScore + 1;
+    humanResult.textContent = humanScore;
+    computerResult.textContent = computerScore;
     currentResult.textContent = "You lose! Scissors beats Paper";
   } else if (humanChoice === "scissors" && computerChoice === "rock") {
     computerScore = computerScore + 1;
+    humanResult.textContent = humanScore;
+    computerResult.textContent = computerScore;
     currentResult.textContent = "You lose! Rock beats Scissors";
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
     humanScore += 1;
+    computerResult.textContent = computerScore;
+    humanResult.textContent = humanScore;
     currentResult.textContent = "You win! Rock beats Scissors";
   } else if (humanChoice === "paper" && computerChoice === "rock") {
     humanScore += 1;
+    computerResult.textContent = computerScore;
+    humanResult.textContent = humanScore;
     currentResult.textContent = "You win! Paper beats Rock";
   } else if (humanChoice === "scissors" && computerChoice === "paper") {
     humanScore += 1;
+    computerResult.textContent = computerScore;
+    humanResult.textContent = humanScore;
     currentResult.textContent = "You win! Scissors beats Paper";
   } else if (humanChoice === computerChoice) {
+    computerResult.textContent = computerScore;
+    humanResult.textContent = humanScore;
     currentResult.textContent = "Draw";
   }
 
