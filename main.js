@@ -83,6 +83,19 @@ function playRound(humanChoice, computerChoice) {
     humanResult.textContent = humanScore;
     currentResult.textContent = "Draw";
   }
+  if (humanScore === 5 || computerScore === 5) {
+    announceTheWinner();
+  }
+}
+
+function announceTheWinner() {
+  if (computerScore > humanScore) {
+    currentResult.textContent = "You lost! Computer is the winner";
+    console.log("You lost! Computer is the winner");
+  } else if (computerScore < humanScore) {
+    currentResult.textContent = "You win! Congratulations!!!";
+    console.log("You win! Congratulations!!!");
+  }
 }
 
 // Run the game
