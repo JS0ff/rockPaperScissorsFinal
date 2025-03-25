@@ -8,23 +8,35 @@ const humanResult = document.querySelector(".human-score");
 
 let humanChoice; // to store the value of the user: Paper Rock Scissors :: for looping
 
-//   // Save the score to declare the winner
+//Save the score to declare the winner
 let humanScore = 0;
 let computerScore = 0;
 
+// Add event listeners to run round
 rockButton.addEventListener("click", function () {
-  humanChoice = "rock";
-  playRound(humanChoice, getComputerChoice());
-  console.log(humanScore);
-  console.log(computerScore);
+  //Condition limit game to 5 rounds
+  if (humanScore >= 5 || computerScore >= 5) {
+    announceTheWinner();
+  } else {
+    humanChoice = "rock";
+    playRound(humanChoice, getComputerChoice());
+  }
 });
 paperButton.addEventListener("click", function () {
-  humanChoice = "paper";
-  playRound(humanChoice, getComputerChoice());
+  if (humanScore >= 5 || computerScore >= 5) {
+    announceTheWinner();
+  } else {
+    humanChoice = "paper";
+    playRound(humanChoice, getComputerChoice());
+  }
 });
 scissorsButton.addEventListener("click", function () {
-  humanChoice = "scissors";
-  playRound(humanChoice, getComputerChoice());
+  if (humanScore >= 5 || computerScore >= 5) {
+    announceTheWinner();
+  } else {
+    humanChoice = "scissors";
+    playRound(humanChoice, getComputerChoice());
+  }
 });
 
 // Get computer choice for Rock, Paper, Scissors
@@ -91,12 +103,7 @@ function playRound(humanChoice, computerChoice) {
 function announceTheWinner() {
   if (computerScore > humanScore) {
     currentResult.textContent = "You lost! Computer is the winner";
-    console.log("You lost! Computer is the winner");
-  } else if (computerScore < humanScore) {
+  } else {
     currentResult.textContent = "You win! Congratulations!!!";
-    console.log("You win! Congratulations!!!");
   }
 }
-
-// Run the game
-// playGame();
