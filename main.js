@@ -102,8 +102,10 @@ function playRound(humanChoice, computerChoice) {
 
 function announceTheWinner() {
   if (computerScore > humanScore) {
-    currentResult.textContent = "You lost! Computer is the winner";
+    currentResult.textContent = "You LOST! Computer is the winner";
+    currentResult.style.fontWeight = "bold";
   } else {
-    currentResult.textContent = "You win! Congratulations!!!";
+    currentResult.textContent = "You WIN! Congratulations!!!";
+    currentResult.style.fontWeight = "bold";
   }
 }
